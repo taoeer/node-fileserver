@@ -1,0 +1,23 @@
+@host = http://127.0.0.1:8081
+
+GET {{host}}/dir
+
+### 
+POST {{host}}/dir?path=/dist
+
+###
+GET {{host}}/file?path=/src/index.js
+
+###
+POST {{host}}/file?path=/dist/index.js
+
+aaabbbb
+
+###
+DELETE {{host}}/file?path=/dist
+
+###
+POST {{host}}/file/rename
+Content-Type: application/json
+
+{"oldName": "/dist/index1.js", "newName": "/test.js"}

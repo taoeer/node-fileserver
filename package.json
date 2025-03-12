@@ -1,0 +1,16 @@
+{
+  "name": "node-fileserver",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js",
+    "build": "yarn run build:execute",
+    "build:execute": "pkg -t node18-win-x64 ./src/index.js -o dist/fileserver"
+  },
+  "dependencies": {
+    "busboy": "^1.6.0",
+    "compressing": "^1.10.1",
+    "express": "^4.21.2"
+  }
+}
